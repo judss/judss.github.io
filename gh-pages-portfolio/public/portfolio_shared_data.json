@@ -1,0 +1,63 @@
+{
+    "basic_info": {
+      "name": "Jordan Gregory-Wallis",
+      "titles": [ "Front-end Developer", "Senior Software Engineer", "" ],
+      "social": [
+        {
+          "name": "github",
+          "url": "https://github.com/judss",
+          "class": "fab fa-github"
+        },
+        {
+          "name": "instagram",
+          "url": "https://www.instagram.com/jordangwallis",
+          "class": "fab fa-instagram"
+        },
+        {
+            "name": "twitter",
+            "url": "https://www.twitter.com/jordanwallis_",
+            "class": "fab fa-twitter"
+          }
+      ],
+      "image": "me.jpg"
+    },
+    "skills": {
+      "icons": [
+        {
+          "name": "HTML 5",
+          "class": "devicon-html5-plain",
+          "level": "95"
+        },
+        {
+          "name": "CSS 3",
+          "class": "devicon-css3-plain",
+          "level": "95"
+        },
+        {
+          "name": "TypeScript",
+          "class": "devicon-typescript-plain",
+          "level": "90"
+        },
+        {
+          "name": "JavaScript",
+          "class": "devicon-javascript-plain",
+          "level": "70"
+        },
+        {
+          "name": "Sass",
+          "class": "devicon-sass-original",
+          "level": "75"
+        },
+        {
+          "name": "Bootstrap",
+          "class": "devicon-bootstrap-plain",
+          "level": "85"
+        },
+        {
+          "name": "C#",
+          "class": "devicon-csharp-plain",
+          "level": "65"
+        }
+      ]
+    }
+  }
