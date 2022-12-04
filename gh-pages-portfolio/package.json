@@ -2,7 +2,7 @@
   "name": "gh-pages-portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://judss.github.io/judss.github.io",
+  "homepage": "https://judss.co.uk",
   "scripts": {
     "predeploy" : "npm run build",
     "deploy" : "gh-pages -d build",
