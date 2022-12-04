@@ -1,38 +1,61 @@
-.App {
-  text-align: center;
+.profile-picture{
+  border-radius: 50%;
+  width: 350px;
+  height: 350px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+header {
+	position: relative;
+	height: 520px;
+	min-height: 450px;
+	width: 100%;
+	background-size: cover;
+	-webkit-background-size: cover;
+	text-align: center;
+	overflow: hidden;
+	background-color: #001219;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	padding-top: 150px;
+	padding-bottom: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+header h1 {
+	font-size: 400%;
+	text-align: center;
+	font-weight: 600 !important;
+	color: #0a9396;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	margin: 0 auto 18px auto;
+	width: 100%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+html {
+	font-size: 62.5%;
+	-webkit-font-smoothing: antialiased;
+	margin: 0;
+	padding: 0;
 }
 
-.App-link {
-  color: #61dafb;
+.aligner {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.title-container {
+	height: 50px;
+}
+
+.title-styles {
+	font-family: 'Raleway', sans-serif;
+	font-size: 250%;
+  color: #fff
+}
+
+.header-icon {
+	height: 150px;
+	width: 150px;
 }
