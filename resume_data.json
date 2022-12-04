@@ -1,0 +1,52 @@
+{
+  "basic_info": {
+    "description_header": "Hi",
+    "description": "👋",
+    "section_name": {
+      "about": "About me",
+      "projects": "Projects",
+      "skills": "Skills",
+      "experience": "Experience"
+    }
+  },
+  "projects": [
+    
+    {
+      "title": "Photography",
+      "startDate": "2018",
+      "description": "Personal project for study subject. I was responsible for testing photography application that optimizes images with popular algorithms used by graphic editors like Pixlr or Adobe Photoshop. I've earned A grade :)",
+      "images": [
+        "images/portfolio/photography/p1.jpg",
+        "images/portfolio/photography/p2.jpg"
+      ],
+      "url": "https://github.com",
+      "technologies": [
+        {
+          "class": "devicon-react-original",
+          "name": "React"
+        },
+        {
+          "class": "devicon-javascript-plain",
+          "name": "JavaScript"
+        }
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "company": "Ignite Insurance Systems",
+      "title": "Senior Software Enginerr",
+      "years": "09.2019 - present",
+      "mainTech": [
+        "C#"
+      ],
+      "technologies": [
+        "REST API",
+        "JavaScript",
+        "Bootstrap",
+        "EF Core",
+        ".NET Core"
+      ]
+    }
+  ]
+}
