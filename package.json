@@ -1,7 +1,0 @@
-{
-    "homepage" : "https://judss.github.io/judss.github.io",
-    "scripts" : {
-        "predeploy" : "npm run build",
-        "deploy" : "gh-pages -d build"
-    }
-}
