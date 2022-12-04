@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;300&display=swap');
+
 .profile-picture{
   border-radius: 50%;
   width: 350px;
@@ -58,4 +60,30 @@ html {
 .header-icon {
 	height: 150px;
 	width: 150px;
+}
+
+footer {
+	background: #1F1F1F;
+	min-height: 100px;
+	width: 100%;
+	overflow: hidden;
+	font-size: 14px;
+	color: white;
+	position: relative;
+	text-align: center;
+}
+
+footer a,
+footer a:visited {
+	color: #fff;
+}
+
+footer a:hover,
+footer a:focus {
+	color: #fff;
+}
+
+.social-links {
+	margin-top: 50px;
+	font-size: 22px;
 }

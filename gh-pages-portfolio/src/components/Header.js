@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import Typical from "react-typical";
 import profile from '../img/me.jpg';
-import GithubCorner from 'react-github-corner';
 
 class Header extends Component {
   titles = [];
@@ -18,7 +17,6 @@ class Header extends Component {
       this.titles = this.props.sharedData.titles.map(x => [ x.toUpperCase(), 1500 ] ).flat();
     }
 
-  <GithubCorner href="https://github.com/judss" direction="left" target="_blank" octoColor="#001219" bannerColor="#0a9396"/>
     return (
       <header id="home" style={{ height: window.innerHeight - 140, display: 'block' }}>
         <div className="row aligner" style={{height: '100%'}}>
