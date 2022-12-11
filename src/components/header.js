@@ -28,7 +28,7 @@ class Header extends Component {
                 <Typical steps={[name]} wrapper="p" />
               </h1>
               <div className="title-container">
-                <Typical className="title-styles" steps={["Software Engineer"]} />
+                <Typical className="title-styles" steps={["Full Stack Software Engineer"]} />
               </div>
             </div>
           </div>

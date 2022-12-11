@@ -29,11 +29,6 @@
           "level": "65"
         },
         {
-          "name": "Azure",
-          "class": "devicon-azure-plain",
-          "level": "85"
-        },
-        {
           "name": ".Net Core",
           "class": "devicon-dotnetcore-plain",
           "level": "85"
@@ -41,6 +36,11 @@
         {
           "name": "SQL",
           "class": "devicon-microsoftsqlserver-plain",
+          "level": "85"
+        },
+        {
+          "name": "Azure",
+          "class": "devicon-azure-plain",
           "level": "85"
         },
         {
