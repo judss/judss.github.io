@@ -3,7 +3,7 @@ import $ from "jquery";
 import './App.css';
 import Header from "./components/header";
 import Footer from "./components/footer";
-//import Skills from "./components/skills";
+import Skills from "./components/skills";
 import GithubCorner from 'react-github-corner';
 
 
@@ -56,7 +56,9 @@ class App extends Component {
     return (
       <div>  
         <Header sharedData={this.state.sharedData.basic_info} />  
-        <GithubCorner href="https://github.com/judss" direction="left" target="_blank" octoColor="#001219" bannerColor="#0a9396"/>           
+        <GithubCorner href="https://github.com/judss" direction="left" target="_blank" octoColor="#001219" bannerColor="#0a9396"/>
+        <Skills sharedSkills={this.state.sharedData.skills}
+          resumeBasicInfo={this.state.resumeData.basic_info} />
         <Footer sharedBasicInfo={this.state.sharedData.basic_info} />
       </div>
     );

@@ -87,3 +87,41 @@ footer a:focus {
 	margin-top: 50px;
 	font-size: 22px;
 }
+
+#skills {
+	background: #1F1F1F;
+	min-height: 200px;
+	width: 100%;
+	overflow: hidden;
+	padding-bottom: 10%;
+}
+
+.skill-icon{
+	color:#fff;
+	font-size: 180%;
+	text-align: center;
+	position: relative;
+}
+
+.skills-tile {
+	background-color: rgba(248,245,244,.05);
+	padding: 10px 10px 5px 10px;
+	width: 100px;
+	margin: 5px 0 5px 0;
+	border-radius: 8px;
+}
+
+.bars .skills {
+	margin-top: 36px;
+	list-style: none;
+}
+
+.section-title {
+	padding-top: 5%;
+	padding-bottom: 5%;
+	font: 18px/24px 'opensans-bold', sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	color: #fff;
+	text-align: center;
+}
