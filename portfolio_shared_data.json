@@ -20,24 +20,5 @@
           }
       ],
       "image": "me.jpg"
-    },
-    "skills": {
-      "icons": [
-        {
-          "name": "C#",
-          "class": "devicon-csharp-plain",
-          "level": "65"
-        },
-        {
-          "name": ".Net Core",
-          "class": "devicon-dotnetcore-plain",
-          "level": "85"
-        },
-        {
-          "name": "SQL",
-          "class": "devicon-microsoftsqlserver-plain",
-          "level": "85"
-        }
-      ]
     }
   }
