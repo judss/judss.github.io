@@ -24,14 +24,24 @@
     "skills": {
       "icons": [
         {
-          "name": "HTML 5",
-          "class": "devicon-html5-plain",
-          "level": "95"
+          "name": "C#",
+          "class": "devicon-csharp-plain",
+          "level": "65"
         },
         {
-          "name": "CSS 3",
-          "class": "devicon-css3-plain",
-          "level": "95"
+          "name": ".Net Core",
+          "class": "devicon-dotnetcore-plain",
+          "level": "85"
+        },
+        {
+          "name": "SQL",
+          "class": "devicon-microsoftsqlserver-plain",
+          "level": "85"
+        },
+        {
+          "name": "Azure",
+          "class": "devicon-azure-plain",
+          "level": "85"
         },
         {
           "name": "TypeScript",
@@ -44,6 +54,16 @@
           "level": "70"
         },
         {
+          "name": "HTML 5",
+          "class": "devicon-html5-plain",
+          "level": "95"
+        },
+        {
+          "name": "CSS 3",
+          "class": "devicon-css3-plain",
+          "level": "95"
+        },
+        {
           "name": "Sass",
           "class": "devicon-sass-original",
           "level": "75"
@@ -52,11 +72,6 @@
           "name": "Bootstrap",
           "class": "devicon-bootstrap-plain",
           "level": "85"
-        },
-        {
-          "name": "C#",
-          "class": "devicon-csharp-plain",
-          "level": "65"
         }
       ]
     }
