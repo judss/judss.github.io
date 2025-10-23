@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jordan Gregory-Wallis</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      html, body { height: 100%; }
+      body { background-color: #f9fafb; color: #111827; }
+      .accent { color: #38bdf8; } /* Tailwind's sky-400 */
+    </style>
+  </head>
+  <body class="flex flex-col min-h-screen">
+    <!-- Header -->
+    <header class="flex justify-between items-center px-6 py-6">
+      <h1 class="text-lg font-semibold tracking-tight">
+        <span class="accent">Jordan</span> Gregory-Wallis
+      </h1>
+      <nav class="space-x-6 text-sm text-gray-600">
+        <a href="https://github.com/judss" target="_blank" class="hover:text-sky-500 transition">GitHub</a>
+        <a href="https://linkedin.com/in/jordangregorywallis" target="_blank" class="hover:text-sky-500 transition">LinkedIn</a>
+        <a href="https://www.instagram.com/jordangwallis/" target="_blank" class="hover:text-sky-500 transition">Instagram</a>
+      </nav>
+    </header>
+
+    <!-- Main content -->
+    <main class="flex-grow flex flex-col justify-center items-center text-center px-6">
+      <h2 class="text-3xl sm:text-4xl font-semibold mb-3">Software Engineer</h2>
+      <p class="text-gray-600 max-w-md">
+        Building software with simplicity and intent.
+      </p>
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center text-xs text-gray-400 py-4">
+      © <span id="year"></span> Jordan Gregory-Wallis
+    </footer>
+
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
