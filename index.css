@@ -1,16 +1,13 @@
 /* -------------------------------
    Base styles
 ---------------------------------- */
-html,
-body {
-  height: 100dvh; /* dynamic viewport height (modern browsers) */
-  min-height: 100dvh;
-}
 
 body {
   background: linear-gradient(to bottom, #f0f9ff, #ffffff);
   color: #111827;
   animation: fadeIn 1s ease-in-out;
+  height: 100dvh; /* dynamic viewport height (modern browsers) */
+  min-height: 100dvh;
 }
 
 /* Accent colour */
