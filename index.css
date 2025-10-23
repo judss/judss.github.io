@@ -1,0 +1,97 @@
+/* -------------------------------
+   Base styles
+---------------------------------- */
+
+body {
+  background: linear-gradient(to bottom, #f0f9ff, #ffffff);
+  color: #111827;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Accent colour */
+.accent {
+  color: #38bdf8; /* Tailwind sky-400 */
+}
+
+/* Coming soon text */
+.coming-soon {
+  color: #94a3b8; /* slate-400 */
+  font-size: 0.9rem;
+  margin-top: 1rem;
+  animation: fadeIn 1.5s ease-in-out 0.5s both;
+}
+
+/* -------------------------------
+   Hover effects
+---------------------------------- */
+
+h1:hover .accent {
+  color: #0ea5e9; /* sky-500 */
+  transition: color 0.3s ease;
+}
+
+nav a {
+  position: relative;
+  text-decoration: none;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 1px;
+  background-color: #38bdf8;
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* -------------------------------
+   Animations
+---------------------------------- */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* -------------------------------
+   Hamburger Menu Styles
+---------------------------------- */
+#menu-container.open #menu {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 64px;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  color: #111;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+/* -------------------------------
+   Dark mode support
+---------------------------------- */
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: linear-gradient(to bottom, #0f172a, #1e293b);
+  }
+
+  #menu-container.open #menu {
+    background-color: #111827;
+    color: #e5e7eb;
+  }
+}
