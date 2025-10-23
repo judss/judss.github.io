@@ -1,4 +1,4 @@
-# judss.github.io
+# 👨‍🚀 judss.github.io
 
 A clean and minimal personal placeholder site built with **Tailwind CSS** and hosted on **GitHub Pages**.
 
