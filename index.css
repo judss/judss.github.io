@@ -2,12 +2,14 @@
    Base styles
 ---------------------------------- */
 
-html,
+html {
+  height: 100%;
+}
+
 body {
   background: linear-gradient(to bottom, #f0f9ff, #ffffff);
   color: #111827;
   animation: fadeIn 1s ease-in-out;
-  height: 100dvh; /* dynamic viewport height (modern browsers) */
   min-height: 100dvh;
 }
 
@@ -91,6 +93,49 @@ nav a:hover::after {
 }
 
 /* -------------------------------
+   Employment Page
+---------------------------------- */
+
+.employment-entry {
+  border-left: 2px solid #38bdf8;
+  padding-left: 1.25rem;
+}
+
+.entry-roles {
+  margin-top: 0.25rem;
+  font-size: 0.875rem;
+  color: #6b7280; /* gray-500 */
+}
+
+.entry-meta {
+  font-size: 0.75rem;
+  color: #9ca3af; /* gray-400 */
+}
+
+.entry-date {
+  font-size: 0.75rem;
+  color: #9ca3af;
+}
+
+.entry-bullets {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  color: #4b5563; /* gray-600 */
+  list-style: disc;
+  list-style-position: inside;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  .entry-roles,
+  .entry-bullets {
+    color: #d1d5db; /* gray-300 */
+  }
+}
+
+/* -------------------------------
    Hamburger Menu Styles
 ---------------------------------- */
 #menu-container.open #menu {
@@ -111,7 +156,6 @@ nav a:hover::after {
 ---------------------------------- */
 
 @media (prefers-color-scheme: dark) {
-  html,
   body {
     background: linear-gradient(to bottom, #0f172a, #1e293b);
   }

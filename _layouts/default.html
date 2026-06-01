@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% if page.title %}{{ page.title }} – {% endif %}Jordan Gregory-Wallis</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/index.css" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👨‍🚀</text></svg>"
+    />
+  </head>
+  <body class="flex flex-col min-h-screen bg-white text-gray-900 dark:text-white">
+
+    <header id="menu-container" class="flex justify-between items-center px-6 py-6">
+      <h1 class="text-lg font-semibold tracking-tight">
+        <a href="/"><span class="accent">Jordan</span> Gregory-Wallis</a>
+      </h1>
+
+      <button id="menu-toggle" class="sm:hidden focus:outline-none">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+
+      <nav id="menu" class="hidden sm:flex flex-col sm:flex-row sm:space-x-6 text-sm text-gray-600 dark:text-gray-300 transition-all duration-300">
+        <a href="/employment"{% if page.url == '/employment.html' %} class="accent font-medium"{% endif %}>Employment</a>
+        <a href="https://github.com/judss" target="_blank">GitHub</a>
+        <a href="https://linkedin.com/in/jordangwallis" target="_blank">LinkedIn</a>
+        <a href="https://www.instagram.com/jordangwallis/" target="_blank">Instagram</a>
+      </nav>
+    </header>
+
+    {{ content }}
+
+    <footer class="text-center text-xs text-gray-400 py-4">
+      © <span id="year"></span> Jordan Gregory-Wallis
+    </footer>
+
+    <script src="/index.js"></script>
+  </body>
+</html>

@@ -8,7 +8,13 @@ A static personal placeholder site hosted on GitHub Pages. No build tools, no pa
 
 ## Development
 
-Open `index.html` directly in a browser. There is no build step, dev server, or install required.
+The site uses Jekyll for shared layouts. GitHub Pages builds it automatically on push.
+
+To run locally, install Jekyll once (`gem install jekyll`) then:
+```bash
+jekyll serve
+```
+Serves at `http://localhost:4000` with live reload. No Gemfile or Bundler needed.
 
 ## Architecture
 
