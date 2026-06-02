@@ -350,6 +350,30 @@ nav a:hover::after {
    Employment Page
 ---------------------------------- */
 
+.company-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  text-decoration: none;
+}
+
+.company-link:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.company-link-icon {
+  width: 0.85rem;
+  height: 0.85rem;
+  opacity: 0.5;
+  flex-shrink: 0;
+  transition: opacity 0.2s ease;
+}
+
+.company-link:hover .company-link-icon {
+  opacity: 1;
+}
+
 .employment-entry {
   border-left: 2px solid #38bdf8;
   padding-left: 1.25rem;
