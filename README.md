@@ -38,6 +38,9 @@ Runs at `http://localhost:4000`.
 
 ---
 
+<img width="2546" height="1356" alt="image" src="https://github.com/user-attachments/assets/65e3aa34-844b-4702-8e20-86f379c8ba6e" />
+
+
 ### 🤖 Co-authored with Claude
 
 This site was built collaboratively with [Claude Code](https://claude.ai/code) by Anthropic. The layout, sections, animations, and integrations were developed through an iterative conversation — Claude wrote and edited the code, I directed the design and content.
