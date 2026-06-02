@@ -388,6 +388,133 @@ nav a:hover::after {
 }
 
 /* -------------------------------
+   Reading
+---------------------------------- */
+
+.reading-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  align-items: start;
+}
+
+@media (max-width: 639px) {
+  .reading-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.reading-card__media {
+  aspect-ratio: 2 / 3;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  background-color: #e5e7eb;
+  margin-bottom: 0.75rem;
+}
+
+.reading-card__media--article {
+  aspect-ratio: 16 / 9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.reading-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.reading-cover--fallback {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #9ca3af;
+  font-size: 0.75rem;
+}
+
+.reading-pub-logo {
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.reading-type-pill {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  padding: 0.15rem 0.5rem;
+  border-radius: 9999px;
+  margin-bottom: 0.4rem;
+}
+
+.reading-type-pill--book {
+  background-color: #eff6ff;
+  color: #3b82f6;
+}
+
+.reading-type-pill--article {
+  background-color: #f0fdf4;
+  color: #16a34a;
+}
+
+.reading-card__title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+}
+
+.reading-card__author,
+.reading-card__source {
+  font-size: 0.775rem;
+  color: #9ca3af;
+  margin-bottom: 0.5rem;
+}
+
+.reading-card__anecdote {
+  font-size: 0.8rem;
+  color: #6b7280;
+  line-height: 1.5;
+}
+
+.reading-card__link {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-size: 0.775rem;
+  color: #38bdf8;
+  text-decoration: none;
+}
+
+.reading-card__link:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .reading-card__media {
+    background-color: #374151;
+  }
+
+  .reading-card__anecdote {
+    color: #9ca3af;
+  }
+
+  .reading-type-pill--book {
+    background-color: #1e3a5f;
+    color: #93c5fd;
+  }
+
+  .reading-type-pill--article {
+    background-color: #052e16;
+    color: #4ade80;
+  }
+}
+
+/* -------------------------------
    Contact Form
 ---------------------------------- */
 
