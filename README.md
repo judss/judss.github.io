@@ -38,8 +38,7 @@ Runs at `http://localhost:4000`.
 
 ---
 
-<img width="2546" height="1356" alt="image" src="https://github.com/user-attachments/assets/65e3aa34-844b-4702-8e20-86f379c8ba6e" />
-
+<img width="2538" height="1364" alt="image" src="https://github.com/user-attachments/assets/8dfe751c-aea9-4dad-9381-1ec9937b8306" />
 
 ### 🤖 Co-authored with Claude
 
