@@ -1,6 +1,17 @@
 // Set current year in footer
 document.getElementById('year').textContent = new Date().getFullYear();
 
+// Scroll-to-top button
+const scrollTopBtn = document.getElementById('scroll-top');
+
+window.addEventListener('scroll', () => {
+  scrollTopBtn.classList.toggle('visible', window.scrollY > 80);
+});
+
+scrollTopBtn.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
 // Scroll reveal
 const observer = new IntersectionObserver(
   (entries) => entries.forEach(entry => {
