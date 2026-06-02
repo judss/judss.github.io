@@ -380,10 +380,21 @@ nav a:hover::after {
   background-color: transparent;
 }
 
+.skill-tag--core {
+  border-color: #38bdf8;
+  color: #38bdf8;
+  font-weight: 600;
+}
+
 @media (prefers-color-scheme: dark) {
   .skill-tag {
     border-color: #374151;
     color: #d1d5db;
+  }
+
+  .skill-tag--core {
+    border-color: #38bdf8;
+    color: #38bdf8;
   }
 }
 
