@@ -1,3 +1,21 @@
+// Dark mode — toggle between dark and light
+const html = document.documentElement;
+const themeToggle = document.getElementById('theme-toggle');
+
+function applyTheme(theme) {
+  html.setAttribute('data-theme', theme);
+  html.classList.toggle('dark', theme === 'dark');
+}
+
+const saved = localStorage.getItem('theme') || 'dark';
+applyTheme(saved);
+
+themeToggle.addEventListener('click', () => {
+  const next = html.classList.contains('dark') ? 'light' : 'dark';
+  localStorage.setItem('theme', next);
+  applyTheme(next);
+});
+
 // Set current year in footer
 document.getElementById('year').textContent = new Date().getFullYear();
 

@@ -68,15 +68,13 @@ body {
   50% { opacity: 0.4; }
 }
 
-@media (prefers-color-scheme: dark) {
-  .availability-badge {
-    color: #4ade80;
-    border-color: #4ade80;
-  }
+html.dark .availability-badge {
+  color: #4ade80;
+  border-color: #4ade80;
+}
 
-  .availability-dot {
-    background-color: #4ade80;
-  }
+html.dark .availability-dot {
+  background-color: #4ade80;
 }
 
 /* Accent colour */
@@ -135,6 +133,44 @@ nav a:hover::after {
     transform: translateY(0);
   }
 }
+
+/* -------------------------------
+   Theme toggle button
+---------------------------------- */
+
+.theme-toggle-btn {
+  display: none;
+}
+
+@media (min-width: 640px) {
+  .theme-toggle-btn {
+    position: fixed;
+    bottom: 1.5rem;
+    left: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 9999px;
+    border: 1px solid #38bdf8;
+    color: #38bdf8;
+    background: transparent;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+}
+
+.theme-toggle-btn:hover {
+  background-color: #38bdf8;
+  color: #fff;
+}
+
+.theme-toggle-btn svg { width: 1.1rem; height: 1.1rem; }
+
+#icon-moon, #icon-sun { display: none; }
+html[data-theme="dark"]  #icon-moon { display: block; }
+html[data-theme="light"] #icon-sun  { display: block; }
 
 /* -------------------------------
    Scroll-to-top button
@@ -280,10 +316,8 @@ nav a:hover::after {
   line-height: 1.5;
 }
 
-@media (prefers-color-scheme: dark) {
-  .ai-card-desc {
-    color: #9ca3af;
-  }
+html.dark .ai-card-desc {
+  color: #9ca3af;
 }
 
 /* -------------------------------
@@ -346,10 +380,8 @@ nav a:hover::after {
   color: #38bdf8;
 }
 
-@media (prefers-color-scheme: dark) {
-  .about-meta {
-    color: #9ca3af;
-  }
+html.dark .about-meta {
+  color: #9ca3af;
 }
 
 /* -------------------------------
@@ -386,16 +418,14 @@ nav a:hover::after {
   font-weight: 600;
 }
 
-@media (prefers-color-scheme: dark) {
-  .skill-tag {
-    border-color: #374151;
-    color: #d1d5db;
-  }
+html.dark .skill-tag {
+  border-color: #374151;
+  color: #d1d5db;
+}
 
-  .skill-tag--core {
-    border-color: #38bdf8;
-    color: #38bdf8;
-  }
+html.dark .skill-tag--core {
+  border-color: #38bdf8;
+  color: #38bdf8;
 }
 
 /* -------------------------------
@@ -505,24 +535,22 @@ nav a:hover::after {
   text-underline-offset: 3px;
 }
 
-@media (prefers-color-scheme: dark) {
-  .reading-card__media {
-    background-color: #374151;
-  }
+html.dark .reading-card__media {
+  background-color: #374151;
+}
 
-  .reading-card__anecdote {
-    color: #9ca3af;
-  }
+html.dark .reading-card__anecdote {
+  color: #9ca3af;
+}
 
-  .reading-type-pill--book {
-    background-color: #1e3a5f;
-    color: #93c5fd;
-  }
+html.dark .reading-type-pill--book {
+  background-color: #1e3a5f;
+  color: #93c5fd;
+}
 
-  .reading-type-pill--article {
-    background-color: #052e16;
-    color: #4ade80;
-  }
+html.dark .reading-type-pill--article {
+  background-color: #052e16;
+  color: #4ade80;
 }
 
 /* -------------------------------
@@ -590,32 +618,28 @@ nav a:hover::after {
   border: 1px solid #fecaca;
 }
 
-@media (prefers-color-scheme: dark) {
-  .form-success {
-    color: #86efac;
-    background-color: #052e16;
-    border-color: #166534;
-  }
-
-  .form-error {
-    color: #fca5a5;
-    background-color: #450a0a;
-    border-color: #991b1b;
-  }
+html.dark .form-success {
+  color: #86efac;
+  background-color: #052e16;
+  border-color: #166534;
 }
 
-@media (prefers-color-scheme: dark) {
-  .form-label {
-    color: #d1d5db;
-  }
+html.dark .form-error {
+  color: #fca5a5;
+  background-color: #450a0a;
+  border-color: #991b1b;
+}
 
-  .form-input {
-    border-color: #374151;
-  }
+html.dark .form-label {
+  color: #d1d5db;
+}
 
-  .form-input:focus {
-    border-color: #38bdf8;
-  }
+html.dark .form-input {
+  border-color: #374151;
+}
+
+html.dark .form-input:focus {
+  border-color: #38bdf8;
 }
 
 /* -------------------------------
@@ -678,11 +702,9 @@ nav a:hover::after {
   gap: 0.25rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  .entry-roles,
-  .entry-bullets {
-    color: #d1d5db; /* gray-300 */
-  }
+html.dark .entry-roles,
+html.dark .entry-bullets {
+  color: #d1d5db;
 }
 
 /* -------------------------------
@@ -705,13 +727,11 @@ nav a:hover::after {
    Dark mode support
 ---------------------------------- */
 
-@media (prefers-color-scheme: dark) {
-  html {
-    background: linear-gradient(to bottom, #0f172a, #1e293b);
-  }
+html.dark {
+  background: linear-gradient(to bottom, #0f172a, #1e293b);
+}
 
-  #menu-container.open #menu {
-    background-color: #111827;
-    color: #e5e7eb;
-  }
+html.dark #menu-container.open #menu {
+  background-color: #111827;
+  color: #e5e7eb;
 }
