@@ -1,6 +1,6 @@
 # 👨‍🚀 judss.github.io
 
-A personal portfolio site built with **Jekyll**, **Tailwind CSS**, and **vanilla JS**, hosted on **GitHub Pages**.
+A personal portfolio site built with **Jekyll**, **vanilla CSS**, and **vanilla JS**, hosted on **GitHub Pages**.
 
 ---
 
@@ -12,26 +12,20 @@ A single-page portfolio site with smooth scroll navigation and scroll-reveal ani
 
 ### ⚙️ Tech Stack
 
-- **Jekyll** — shared layout and templating, built natively by GitHub Pages
-- **Tailwind CSS (CDN)** — utility classes
+- **GitHub Pages** — hosts the static files directly (`.nojekyll` disables the Jekyll build)
+- **Vanilla CSS** — custom styles and design tokens in `index.css`
 - **Vanilla JS** — hamburger menu, scroll reveal (IntersectionObserver), footer year
 - **Formspree** — contact form email delivery
-- **GitHub Pages** — hosting
+- **Formspree** — contact form email delivery
 
 ---
 
 ### 🚀 Running locally
 
-Install Jekyll once:
+Open `index.html` directly in a browser, or use any static server:
 
 ```bash
-gem install jekyll
-```
-
-Then serve the site:
-
-```bash
-jekyll serve
+python3 -m http.server 4000
 ```
 
 Runs at `http://localhost:4000`.

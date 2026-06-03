@@ -4,34 +4,38 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-A static personal placeholder site hosted on GitHub Pages. No build tools, no package manager, no frameworks — just three files served directly by GitHub Pages.
+A static personal portfolio site hosted on GitHub Pages. No build tools, no package manager, no frameworks — just vanilla HTML, CSS, and JS served via Jekyll.
 
 ## Development
 
-The site uses Jekyll for shared layouts. GitHub Pages builds it automatically on push.
+No build step. Open `index.html` directly in a browser, or use any static server:
 
-To run locally, install Jekyll once (`gem install jekyll`) then:
 ```bash
-jekyll serve
+python3 -m http.server 4000
 ```
-Serves at `http://localhost:4000` with live reload. No Gemfile or Bundler needed.
+
+Serves at `http://localhost:4000`. `.nojekyll` in the repo root tells GitHub Pages to skip the Jekyll build and serve files directly.
 
 ## Architecture
 
 The site is a single page composed of three files:
 
-- **`index.html`** — full page structure: header with hamburger nav, centred hero text, footer. Tailwind CSS is loaded via CDN (`cdn.tailwindcss.com`).
-- **`index.css`** — all custom styles: gradient background, `.accent` colour, `.coming-soon` text, nav underline hover effect, `fadeIn` keyframe animation, hamburger menu open state, and `@media (prefers-color-scheme: dark)` overrides.
-- **`index.js`** — two behaviours: sets `#year` text to the current year; toggles `.open` on `#menu-container` when `#menu-toggle` is clicked.
+- **`index.html`** — full page structure: header with hamburger nav, centred hero text, footer.
+- **`index.css`** — all styles: CSS custom properties (design tokens), reset, layout, component styles, animations, and responsive breakpoints. No external CSS dependencies.
+- **`index.js`** — sets `#year` text to the current year; toggles `.open` on `#menu-container` when `#menu-toggle` is clicked; scroll reveal via IntersectionObserver; scroll-to-top button.
+
+### Design tokens
+
+Colours and values are defined as CSS custom properties on `:root` in `index.css`. Use these variables (`--accent`, `--bg`, `--muted`, etc.) rather than hardcoding hex values.
 
 ### Hamburger menu
 
-The mobile nav is hidden by default (`hidden sm:flex` via Tailwind). Clicking the hamburger button adds `.open` to `#menu-container`; `index.css` then makes `#menu` display as an absolute full-width dropdown. The desktop layout uses Tailwind responsive classes directly.
+The mobile nav (`#menu`) is hidden by default. Clicking the hamburger button adds `.open` to `#menu-container` (the header); `index.css` then makes `#menu` display as an absolute full-width dropdown below the header. On desktop (≥640px) the toggle button is hidden and the nav is displayed inline.
 
 ### Dark mode
 
-Dark mode is CSS-only via `prefers-color-scheme: dark` in `index.css`. Tailwind's `dark:` utility classes are also used inline in `index.html` for text colours.
+The site is dark-first. Background and text colours are set globally via CSS custom properties — there are no light mode overrides.
 
 ### Viewport height
 
-`height: 100dvh` and `min-height: 100dvh` on `html, body` use dynamic viewport height to avoid the mobile browser chrome overlap issue that caused several fix attempts in recent commits.
+`min-height: 100dvh` on `body` uses dynamic viewport height to avoid the mobile browser chrome overlap issue.
