@@ -6,14 +6,13 @@
     <title>{% if page.title %}{{ page.title }} – {% endif %}Jordan Gregory-Wallis</title>
 
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>tailwind.config = { darkMode: 'class' };</script>
     <link rel="stylesheet" href="/index.css" />
     <link
       rel="icon"
       href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👨‍🚀</text></svg>"
     />
   </head>
-  <body class="flex flex-col text-gray-900 dark:text-white">
+  <body class="flex flex-col">
 
     <header id="menu-container" class="flex justify-between items-center px-6 py-6">
       <h1 class="text-lg font-semibold tracking-tight">
@@ -26,7 +25,7 @@
         </svg>
       </button>
 
-      <nav id="menu" class="hidden sm:flex flex-col sm:flex-row sm:space-x-6 text-sm text-gray-600 dark:text-gray-300 transition-all duration-300">
+      <nav id="menu" class="hidden sm:flex flex-col sm:flex-row sm:space-x-6 text-sm text-gray-300 transition-all duration-300">
         <a href="#about">About</a>
         <a href="#experience">Experience</a>
         <a href="#skills">Skills</a>
@@ -42,16 +41,6 @@
     <footer class="text-center text-xs text-gray-400 py-4">
       © <span id="year"></span> Jordan Gregory-Wallis
     </footer>
-
-    <button id="theme-toggle" class="theme-toggle-btn" aria-label="Switch theme">
-      <svg id="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M21 12.79A9 9 0 1111.21 3a7 7 0 109.79 9.79z"/>
-      </svg>
-      <svg id="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <circle cx="12" cy="12" r="5"/>
-        <path stroke-linecap="round" d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
-      </svg>
-    </button>
 
     <button id="scroll-top" class="scroll-top-btn" aria-label="Back to top">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
