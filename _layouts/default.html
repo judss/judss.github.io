@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <title>{% if page.title %}{{ page.title }} – {% endif %}Jordan Gregory-Wallis</title>
-
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="/index.css" />
     <link
@@ -20,12 +19,15 @@
       </h1>
 
       <button id="menu-toggle" class="sm:hidden focus:outline-none">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <svg id="icon-hamburger" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+        <svg id="icon-close" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
         </svg>
       </button>
 
-      <nav id="menu" class="hidden sm:flex flex-col sm:flex-row sm:space-x-6 text-sm text-gray-300 transition-all duration-300">
+      <nav id="menu" class="sm:flex flex-col sm:flex-row sm:space-x-6 text-sm text-gray-300">
         <a href="#about">About</a>
         <a href="#experience">Experience</a>
         <a href="#skills">Skills</a>

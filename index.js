@@ -10,6 +10,7 @@ window.addEventListener('scroll', () => {
 
 scrollTopBtn.addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
+  history.replaceState(null, '', window.location.pathname);
 });
 
 // Scroll reveal
@@ -30,4 +31,10 @@ const container = document.getElementById('menu-container');
 
 toggle.addEventListener('click', () => {
   container.classList.toggle('open');
+});
+
+document.querySelectorAll('#menu a').forEach(link => {
+  link.addEventListener('click', () => {
+    container.classList.remove('open');
+  });
 });

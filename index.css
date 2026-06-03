@@ -3,8 +3,7 @@
 ---------------------------------- */
 
 html {
-  min-height: 100%;
-  background: linear-gradient(to bottom, #0f172a, #1e293b);
+  background-color: #0f172a;
   scroll-behavior: smooth;
 }
 
@@ -590,16 +589,40 @@ nav a:hover::after {
 /* -------------------------------
    Hamburger Menu Styles
 ---------------------------------- */
-#menu-container.open #menu {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  top: 64px;
-  left: 0;
-  width: 100%;
-  background-color: #111827;
-  opacity: 0.85;
-  color: #e5e7eb;
-  text-align: center;
-  padding: 1rem 0;
+
+#icon-close { display: none; }
+#menu-container.open #icon-hamburger { display: none; }
+#menu-container.open #icon-close { display: block; }
+
+@media (max-width: 639px) {
+  #menu-container {
+    position: relative;
+  }
+
+  #menu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #0f172a;
+    color: #e5e7eb;
+    text-align: center;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    font-size: 2rem;
+    transition: max-height 0.35s ease, opacity 0.25s ease, padding 0.35s ease;
+  }
+
+  #menu a {
+    padding: 1rem 0;
+  }
+
+  #menu-container.open #menu {
+    max-height: 520px;
+    opacity: 1;
+    padding: 1rem 0;
+  }
 }
