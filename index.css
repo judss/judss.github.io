@@ -14,14 +14,6 @@ body {
   min-height: 100dvh;
 }
 
-header {
-  padding-top: calc(1.5rem + env(safe-area-inset-top, 0px));
-}
-
-footer {
-  padding-bottom: calc(1rem + env(safe-area-inset-bottom, 0px));
-}
-
 /* Scroll reveal */
 .reveal {
   opacity: 0;
@@ -79,14 +71,6 @@ footer {
 /* Accent colour */
 .accent {
   color: #38bdf8; /* Tailwind sky-400 */
-}
-
-/* Coming soon text */
-.coming-soon {
-  color: #94a3b8; /* slate-400 */
-  font-size: 0.9rem;
-  margin-top: 1rem;
-  animation: fadeIn 1.5s ease-in-out 0.5s both;
 }
 
 /* -------------------------------
@@ -614,6 +598,7 @@ nav a:hover::after {
   left: 0;
   width: 100%;
   background-color: #111827;
+  opacity: 0.85;
   color: #e5e7eb;
   text-align: center;
   padding: 1rem 0;
