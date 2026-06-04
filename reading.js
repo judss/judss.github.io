@@ -67,49 +67,114 @@ const readingItems = [
   }
 ];
 
+function buildBookCard(item) {
+  const card = document.createElement('div');
+  card.className = 'reading-card reading-card--book';
+
+  const media = document.createElement('div');
+  media.className = 'reading-card__media';
+
+  const img = document.createElement('img');
+  img.src = `assets/books/${item.cover}`;
+  img.alt = `Cover of ${item.title} by ${item.author}`;
+  img.className = 'reading-cover';
+  img.addEventListener('error', () => {
+    media.classList.add('reading-cover--fallback');
+    img.remove();
+  }, { once: true });
+  media.appendChild(img);
+
+  const body = document.createElement('div');
+  body.className = 'reading-card__body';
+
+  const pill = document.createElement('span');
+  pill.className = 'reading-type-pill reading-type-pill--book';
+  pill.textContent = 'Book';
+
+  const title = document.createElement('p');
+  title.className = 'reading-card__title';
+  title.textContent = item.title;
+
+  const author = document.createElement('p');
+  author.className = 'reading-card__author';
+  author.textContent = item.author;
+
+  const anecdote = document.createElement('p');
+  anecdote.className = 'reading-card__anecdote';
+  anecdote.textContent = item.anecdote;
+
+  body.append(pill, title, author, anecdote);
+  card.append(media, body);
+  return card;
+}
+
+function buildArticleCard(item) {
+  const card = document.createElement('div');
+  card.className = 'reading-card reading-card--article';
+
+  const media = document.createElement('div');
+  media.className = 'reading-card__media reading-card__media--article';
+  media.style.backgroundColor = item.pubColor;
+  media.setAttribute('role', 'img');
+  media.setAttribute('aria-label', `${item.source} logo`);
+
+  if (item.thumbnail) {
+    const img = document.createElement('img');
+    img.src = `assets/articles/${item.thumbnail}`;
+    img.alt = `${item.source} thumbnail`;
+    img.className = 'reading-cover';
+    media.appendChild(img);
+  } else {
+    const logo = document.createElement('span');
+    logo.className = 'reading-pub-logo';
+    logo.textContent = item.pubInitials;
+    media.appendChild(logo);
+  }
+
+  const body = document.createElement('div');
+  body.className = 'reading-card__body';
+
+  const pill = document.createElement('span');
+  pill.className = 'reading-type-pill reading-type-pill--article';
+  pill.textContent = 'Article';
+
+  const title = document.createElement('p');
+  title.className = 'reading-card__title';
+  title.textContent = item.title;
+
+  const source = document.createElement('p');
+  source.className = 'reading-card__source';
+  source.textContent = item.source;
+
+  const anecdote = document.createElement('p');
+  anecdote.className = 'reading-card__anecdote';
+  anecdote.textContent = item.anecdote;
+
+  const link = document.createElement('a');
+  link.href = item.url;
+  link.target = '_blank';
+  link.rel = 'noopener noreferrer';
+  link.className = 'reading-card__link';
+  link.setAttribute('aria-label', `Read ${item.title} (opens in new tab)`);
+  link.textContent = 'Read article ↗';
+
+  body.append(pill, title, source, anecdote, link);
+  card.append(media, body);
+  return card;
+}
+
 function renderReadingGrid() {
   const grid = document.getElementById('reading-grid');
-  grid.innerHTML = readingItems.map(item => {
-    if(!item.visible) {
-      return '';
-    }
-    if (item.type === 'book') {
-      return `
-        <div class="reading-card reading-card--book">
-          <div class="reading-card__media">
-            <img
-              src="assets/books/${item.cover}"
-              alt="Cover of ${item.title} by ${item.author}"
-              class="reading-cover"
-              onerror="this.parentElement.classList.add('reading-cover--fallback'); this.remove();"
-            />
-          </div>
-          <div class="reading-card__body">
-            <span class="reading-type-pill reading-type-pill--book">Book</span>
-            <p class="reading-card__title">${item.title}</p>
-            <p class="reading-card__author">${item.author}</p>
-            <p class="reading-card__anecdote">${item.anecdote}</p>
-          </div>
-        </div>`;
-    } else {
-      const mediaContent = item.thumbnail
-        ? `<img src="assets/articles/${item.thumbnail}" alt="${item.source} thumbnail" class="reading-cover" />`
-        : `<span class="reading-pub-logo">${item.pubInitials}</span>`;
-      return `
-        <div class="reading-card reading-card--article">
-          <div class="reading-card__media reading-card__media--article" style="background-color: ${item.pubColor}" role="img" aria-label="${item.source} logo">
-            ${mediaContent}
-          </div>
-          <div class="reading-card__body">
-            <span class="reading-type-pill reading-type-pill--article">Article</span>
-            <p class="reading-card__title">${item.title}</p>
-            <p class="reading-card__source">${item.source}</p>
-            <p class="reading-card__anecdote">${item.anecdote}</p>
-            <a href="${item.url}" target="_blank" rel="noopener noreferrer" class="reading-card__link" aria-label="Read ${item.title} (opens in new tab)">Read article ↗</a>
-          </div>
-        </div>`;
-    }
-  }).join('');
+  const fragment = document.createDocumentFragment();
+
+  readingItems
+    .filter(item => item.visible)
+    .forEach(item => {
+      const card = item.type === 'book' ? buildBookCard(item) : buildArticleCard(item);
+      fragment.appendChild(card);
+    });
+
+  grid.appendChild(fragment);
 }
 
 function observeReadingCards() {

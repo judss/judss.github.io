@@ -12,7 +12,9 @@
   --border:    #374151;
   --surface:   #1e293b;
   --bg:        #0f172a;
-  --available: #4ade80;
+  --available:     #4ade80;
+  --color-error:   #f87171;
+  --color-success: #86efac;
 }
 
 /* Reset */
@@ -331,6 +333,11 @@ main {
 }
 
 .availability-dot {
+  display: inline-block;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 9999px;
+  background: var(--available);
   animation: pulse-dot 2s ease-in-out infinite;
 }
 
@@ -379,7 +386,7 @@ h1:hover .accent {
   height: 2.5rem;
   border-radius: 9999px;
   border: 1px solid var(--accent);
-  color: #fff;
+  color: var(--bg);
   background-color: var(--accent);
   cursor: pointer;
   opacity: 0;
@@ -403,19 +410,31 @@ h1:hover .accent {
 }
 
 /* -------------------------------
-   Social icon buttons (hover fills bg; child SVG sizing)
+   Shared button base (accent outline → fills on hover)
 ---------------------------------- */
 
-.social-btn {
-  display: flex;
+.btn {
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 2.5rem;
-  height: 2.5rem;
   border-radius: 9999px;
   border: 1px solid var(--accent);
   color: var(--accent);
   transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.btn:hover {
+  background-color: var(--accent);
+  color: var(--bg);
+}
+
+/* -------------------------------
+   Social icon buttons
+---------------------------------- */
+
+.social-btn {
+  width: 2.5rem;
+  height: 2.5rem;
 }
 
 .social-btn svg {
@@ -423,32 +442,15 @@ h1:hover .accent {
   height: 1.1rem;
 }
 
-.social-btn:hover {
-  background-color: var(--accent);
-  color: #fff;
-}
-
 /* -------------------------------
-   CV / action button (hover fills bg)
+   CV / action button
 ---------------------------------- */
 
 .cv-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
   gap: 0.4rem;
   padding: 0.5rem 1.25rem;
-  border: 1px solid var(--accent);
-  color: var(--accent);
-  border-radius: 9999px;
   font-size: 0.875rem;
   text-decoration: none;
-  transition: background-color 0.2s ease, color 0.2s ease;
-}
-
-.cv-btn:hover {
-  background-color: var(--accent);
-  color: #fff;
 }
 
 /* -------------------------------
@@ -797,7 +799,7 @@ h1:hover .accent {
 .form-error-msg {
   display: block;
   font-size: 0.75rem;
-  color: #f87171;
+  color: var(--color-error);
   margin-top: 0.25rem;
   min-height: 1rem;
 }
@@ -813,6 +815,7 @@ h1:hover .accent {
   outline: none;
   transition: border-color 0.2s ease;
   box-sizing: border-box;
+  resize: none;
 }
 
 .form-input:focus {
@@ -824,7 +827,7 @@ h1:hover .accent {
 }
 
 .form-input[aria-invalid="true"] {
-  border-color: #f87171;
+  border-color: var(--color-error);
 }
 
 /* Controlled by Formspree SDK (display: none → block) */
@@ -838,13 +841,13 @@ h1:hover .accent {
 }
 
 .form-success {
-  color: #86efac;
+  color: var(--color-success);
   background-color: #052e16;
   border: 1px solid #166534;
 }
 
 .form-error {
-  color: #fca5a5;
+  color: var(--color-error);
   background-color: #450a0a;
   border: 1px solid #991b1b;
 }

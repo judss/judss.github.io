@@ -16,7 +16,6 @@ A single-page portfolio site with smooth scroll navigation and scroll-reveal ani
 - **Vanilla CSS** — custom styles and design tokens in `index.css`
 - **Vanilla JS** — hamburger menu, scroll reveal (IntersectionObserver), footer year
 - **Formspree** — contact form email delivery
-- **Formspree** — contact form email delivery
 
 ---
 
