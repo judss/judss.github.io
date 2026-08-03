@@ -42,3 +42,32 @@ if (toggle && container) {
     });
   });
 }
+
+// Interest card carousels
+document.querySelectorAll('[data-carousel]').forEach(card => {
+  const images = card.querySelectorAll('.carousel-track img');
+  const dots = card.querySelectorAll('.carousel-dot');
+  let index = 0;
+  let timer;
+
+  function show(i) {
+    images[index].classList.remove('active');
+    dots[index].classList.remove('active');
+    index = (i + images.length) % images.length;
+    images[index].classList.add('active');
+    dots[index].classList.add('active');
+  }
+
+  function next() { show(index + 1); }
+  function start() { timer = setInterval(next, 4000); }
+  function stop() { clearInterval(timer); }
+
+  card.querySelector('.carousel-next').addEventListener('click', () => { show(index + 1); stop(); start(); });
+  card.querySelector('.carousel-prev').addEventListener('click', () => { show(index - 1); stop(); start(); });
+  dots.forEach((dot, i) => dot.addEventListener('click', () => { show(i); stop(); start(); }));
+
+  card.addEventListener('mouseenter', stop);
+  card.addEventListener('mouseleave', start);
+
+  if (images.length > 1) start();
+});
