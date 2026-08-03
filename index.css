@@ -245,13 +245,13 @@ main {
   font-weight: 600;
 }
 
-#about h2      { margin-bottom: 2rem; }
-#experience h2 { margin-bottom: 2.5rem; }
-#skills h2     { margin-bottom: 2.5rem; }
+#about h2      { margin-bottom: 1rem; }
+#experience h2 { margin-bottom: 1rem; }
+#skills h2     { margin-bottom: 1rem; }
 #ai h2         { margin-bottom: 1rem; }
-#interests h2  { margin-bottom: 2.5rem; }
+#interests h2  { margin-bottom: 1rem; }
 #reading h2    { margin-bottom: 1rem; }
-#contact h2    { margin-bottom: 0.5rem; }
+#contact h2    { margin-bottom: 1rem; }
 
 .section-desc {
   font-size: 0.875rem;
@@ -639,6 +639,10 @@ h1:hover .accent {
 
 .interest-card:hover img {
   transform: scale(1.04);
+}
+
+.interest-card img.crop-top {
+  object-position: top;
 }
 
 .interest-label {
