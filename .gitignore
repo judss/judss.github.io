@@ -7,3 +7,6 @@ Gemfile.lock
 
 # OS
 .DS_Store
+
+# Local backups
+assets-originals-backup/

@@ -6,7 +6,7 @@ A personal portfolio site built with **Jekyll**, **vanilla CSS**, and **vanilla 
 
 ### 🧭 Overview
 
-A single-page portfolio site with smooth scroll navigation and scroll-reveal animations. Sections include a hero with profile photo and social links, an about summary, work experience, technical skills, interests with a photo grid, and a contact form.
+A single-page portfolio site with smooth scroll navigation and scroll-reveal animations. Sections include a hero with profile photo and social links, an about summary, work experience, technical skills, AI tools, interests with per-card auto-advancing photo carousels, current reading, and a contact form.
 
 ---
 
@@ -14,7 +14,7 @@ A single-page portfolio site with smooth scroll navigation and scroll-reveal ani
 
 - **GitHub Pages** — hosts the static files directly (`.nojekyll` disables the Jekyll build)
 - **Vanilla CSS** — custom styles and design tokens in `index.css`
-- **Vanilla JS** — hamburger menu, scroll reveal (IntersectionObserver), footer year
+- **Vanilla JS** — hamburger menu, scroll reveal (IntersectionObserver), footer year, scroll-to-top button, interest-card photo carousels (`index.js`), reading list rendering (`reading.js`)
 - **Formspree** — contact form email delivery
 
 ---

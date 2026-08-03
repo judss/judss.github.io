@@ -18,15 +18,16 @@ Serves at `http://localhost:4000`. `.nojekyll` in the repo root tells GitHub Pag
 
 ## Architecture
 
-The site is a single page composed of three files:
+The site is a single page composed of four files:
 
-- **`index.html`** — full page structure: header with hamburger nav, centred hero text, footer.
+- **`index.html`** — full page structure: header with hamburger nav, hero, and sections for About, Experience, Skills, AI Tools, Interests, Reading, and Contact, plus footer.
 - **`index.css`** — all styles: CSS custom properties (design tokens), reset, layout, component styles, animations, and responsive breakpoints. No external CSS dependencies.
-- **`index.js`** — sets `#year` text to the current year; toggles `.open` on `#menu-container` when `#menu-toggle` is clicked; scroll reveal via IntersectionObserver; scroll-to-top button.
+- **`index.js`** — sets `#year` text to the current year; toggles `.open` on `#menu-container` when `#menu-toggle` is clicked; scroll reveal via IntersectionObserver; scroll-to-top button; drives the Interests section's per-card photo carousels (autoplay via `setInterval`, prev/next arrows, dot navigation, pause on hover).
+- **`reading.js`** — populates `#reading-grid` for the Reading section.
 
 ### Design tokens
 
-Colours and values are defined as CSS custom properties on `:root` in `index.css`. Use these variables (`--accent`, `--bg`, `--muted`, etc.) rather than hardcoding hex values.
+Colours and values are defined as CSS custom properties on `:root` in `index.css`. Use these variables (`--accent`, `--bg`, `--muted`, `--available`, `--color-error`, `--color-success`, etc.) rather than hardcoding hex values.
 
 ### Hamburger menu
 
